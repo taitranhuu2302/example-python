@@ -158,6 +158,77 @@ def exampleNine(x, n):
 # Kiểm tra kết quả với x = 1 và n = 5
 print(f"Example Nine: {exampleNine(1, 5)}")
 
+
+# 10
+def exampleTen(x, n):
+    result = 0
+    for i in range(n):
+        sign = (-1) ** i
+        term = x ** (2 * i + 1) / (2 * i + 1)
+        result += sign * term
+    return result
+
+
+# Kiểm tra kết quả với x = 0.5 và n = 10
+print(f"Example Ten: {exampleTen(0.5, 10)}")
+
+
+# 11
+def exampleEleven(x, n):
+    result = 0
+    sign = 1
+    for i in range(1, n + 1):
+        term = (x ** i) / i
+        result += sign * term
+        sign *= -1
+    return result
+
+
+# Kiểm tra kết quả với x = 0.5 và n = 10
+print(f"Example Eleven: {exampleEleven(0.5, 10)}")
+
+
+# 12
+def exampleTwelve(x, n):
+    result = 0
+    for i in range(n):
+        term = (x ** (2 * i + 1)) / (2 * i + 1)
+        result += term
+    return 2 * result
+
+
+x = 0.5  # Giá trị của x
+n = 10  # Số lượng các số hạng cần tính
+
+# Kiểm tra kết quả với x = 0.5 và n = 10
+print(f"Example Twelve: {exampleTwelve(x, n)}")
+
+
+# 13
+def exampleThirteen(x, n):
+    result = 0
+    for i in range(n):
+        term = (x ** (2 * i + 1)) / math.factorial(2 * i + 1)
+        result += term
+    return result
+
+
+# Kiểm tra kết quả với x = 1.5 và n = 10
+print(f"Example Thirteen {exampleThirteen(1.5, 10)}")
+
+
+# 14
+def exampleFourteen(x, n):
+    result = 0
+    for i in range(n):
+        term = (x ** (2 * i)) / math.factorial(2 * i)
+        result += term
+    return result
+
+
+# Kiểm tra kết quả với x = 1.5 và n = 10
+print(f"Example Fourteen: {exampleFourteen(1.5, 10)}")
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print('----------------')
