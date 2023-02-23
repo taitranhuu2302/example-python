@@ -151,23 +151,31 @@ def exampleSix(x):
 print(f"Example Six: {exampleSix(1)}")
 
 
-# # 7
-# def exampleSeven(x, terms=10):
-#     result = 0
-#     sign = 1
-#     for n in range(terms):
-#         numerator = x ** (2 * n)
-#         denominator = math.factorial(2 * n)
-#         term = sign * numerator / denominator
-#         result += term
-#         sign *= -1
-#     return result
-#
-#
-# # Kiểm tra với giá trị x = pi/4
-# print(f"Example Seven: {exampleSeven(math.pi / 4)}")
-#
-#
+# 7
+def exampleSeven(x):
+    i = 2
+    
+    first = 1
+    second = 1 - (x**(i))/tinhgiaithua(i)
+    y = 0
+
+    while(abs(first - second) > eps):
+        y += 1
+        i += 2
+        
+        first = second
+        
+        if (i % 2 != 0):
+            second -= x**i/tinhgiaithua(i)
+        else:
+            second += x**i/tinhgiaithua(i)  
+        
+    return first
+
+
+print(f"Example Seven: {exampleSeven(1)}")
+
+
 # # 8
 # def exampleEight(x, terms=10):
 #     result = 0
@@ -181,8 +189,8 @@ print(f"Example Six: {exampleSix(1)}")
 #         term = numerator / denominator
 #         result += term
 #     return result
-#
-#
+
+
 # # Kiểm tra kết quả với x = 0.5
 # print(f"Example Eight: {exampleEight(0.5)}")
 #
